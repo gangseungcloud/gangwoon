@@ -7,11 +7,17 @@ option = input()
 print(option)
 
 if option == '1':
-    print("아직 구현안했어 바보야")
+    newmemo = input("메모를 입력해주세요 \n")
+    print(newmemo)
+    filename = 'memo.txt'
+    f = open(filename, 'a')
+    f.write(newmemo)
+    f.close()
 elif option == "2":
     babo = 'memo2.txt'
     f = open(babo)
     memo = f.read()
     print(memo)
+    f.close()
 else:
     print("잘못구현했습니다.")
